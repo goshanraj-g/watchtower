@@ -27,13 +27,12 @@ working.
 
 | | |
 |---|---|
-| **180,800** | log lines ingested across 8 months at **~7,000 lines/sec**, with zero parse failures |
-| **22,982 → 3** | a month of traffic reduced to 3 incidents worth an analyst's time |
-| **26×** | faster event paging (81 ms → 3 ms) |
-| **2×** | faster analytics on TimescaleDB continuous aggregates, bit-identical to raw queries |
-| **100%** | deterministic replay: runs are hashed by config, dataset and model |
-| **0** | message brokers. Postgres is the event store, job queue and outbox (`SKIP LOCKED`) |
-| **187** | backend tests plus real-browser Playwright gates on every PR |
+| **High-throughput ingestion** | ~7,000 log lines/sec |
+| **Less noise. Clear incidents.** | 22,982 log events distilled into 3 actionable incidents |
+| **Millisecond queries** | Event paging cut from 81 ms to 3 ms—a 26× speedup |
+| **2× faster analytics** | TimescaleDB continuous aggregates with results identical to raw queries |
+| **Reproducible investigations** | Deterministic replay tracked by config, dataset, and model hashes |
+| **One database. Zero brokers.** | Postgres powers the event store, job queue, and outbox |
 
 **Built on a time-series engine.** Events are stored in TimescaleDB hypertables,
 automatically partitioned by time, so queries only touch the chunks they need.
