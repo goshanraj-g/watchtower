@@ -1,4 +1,4 @@
-# WatchTower
+# WatchTower (Winner @ Hack the North)
 
 **Detection → investigation → containment in one loop. An AI security analyst that can't make things up.**
 
